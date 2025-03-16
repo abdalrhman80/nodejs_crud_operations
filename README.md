@@ -1,2 +1,2 @@
 # nodejs_crud_operations
-Simple CRUD Operations Projects Using Nodejs 
+Simple CRUD Operations Project Using Nodejs 
