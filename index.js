@@ -5,9 +5,12 @@ const Article = require("./models/article");
 const app = express();
 app.use(express.json());
 
+const dbUsername = process.env.MONGODB_USERNAME;
+const dbPassword = process.env.MONGODB_PASSWORD;
+
 mongoose
   .connect(
-    "mongodb+srv://abdalrhmangamel681:11969255@cluster0.if3ja.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    `mongodb+srv://${dbUsername}:${dbPassword}@cluster0.if3ja.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
   )
   .then(() => {
     console.log("Connected to MongoDB");
